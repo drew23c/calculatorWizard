@@ -1,0 +1,22 @@
+body{
+    background-color:blueviolet;
+    font-size: 50px;
+    font-family: 'Fjalla One', sans-serif;
+}
+*{
+    text-align: center;
+}
+.hide{
+    display:none;
+}
+button{
+    font-size:30px;
+}
+pre{
+    background-color:gainsboro;
+}
+#userInput{
+    font-size:25px;
+    float:left;
+    margin-left:3%;
+}
