@@ -90,15 +90,6 @@ app.get('/fahToC',(req,res)=>{
     obj.fahToC = obj.num1 - 32 * 1.8
     res.json(obj)
 })
-app.get('userAdd/:number1/:number2', (req,res)=>{
-    let {number1,number2,userAdd} = req.params
-    let obj = {}
-    obj.number1 = number1
-    obj.number2 = number2
-    obj.userAdd = userAdd
-    obj.userAdd = obj.number1 + obj.number2
-    res.json(obj)
-})
 app.listen(port);
 const homepage = `
 <html>
