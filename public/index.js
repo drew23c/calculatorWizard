@@ -34,7 +34,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
     let div2 = document.getElementById('div2')
     let ansCir = document.getElementById('ansCir')
     let cir1 = document.getElementById('cir1')
-
+    let ansMult = document.getElementById('ansMult')
+    let mult1 = document.getElementById('mult1')
+    let mult2 = document.getElementById('mult2')
+    let numSqrt = document.getElementById('numSqrt')
+    let ansSqrt = document.getElementById('ansSqrt')
     
     add.addEventListener('click', (e)=>{
         
@@ -161,8 +165,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
     userCir.addEventListener('click', (e)=>{
         ansCir.innerText = 3.141592 * Math.pow(cir1.value,2)
     })
+    Sqrt.addEventListener('click', (e)=>{
+        ansSqrt.innerText = Math.sqrt(numSqrt.value)
+    })
     userDiv.addEventListener('click', (e)=>{
         ansDiv.innerText = div1.value / div2.value
+    })
+    userMult.addEventListener('click', (e)=>{
+        ansMult.innerText = mult1.value * mult2.value
     })
     fahrenheit.addEventListener('click', (e)=>{
         ansFah.innerText = numFah.value * 1.8 + 32 + 'degrees'
