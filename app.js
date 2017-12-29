@@ -109,73 +109,82 @@ const homepage = `
     <p id="num2"></p>
     <p id="result"></p> 
     
-    <button id="add">Add</button>
-    <pre id="sum" class="hide">number + number = sum</pre>
-    <button id="sub">Subtract</button>
-    <pre id="dif" class="hide">number - number = difference</pre>    
-    <button id="mult">Multiply</button>
-    <pre id="prod" class="hide">number * number = product</pre>    
-    <button id="div">Divide</button>
-    <pre id="dividend" class="hide">number / number = dividend</pre>    
-    <button id="mod">Modulo</button>
-    <pre id="modulo" class="hide">number / number = remainder</pre>        
-    <button id="sqrt">Square Root</button>
-    <button id="areaOfC">Area of Circle</button>
-    <pre id="area" class="hide">pi * r to the 2nd power = area</pre>                
-    <button id="celToF">Celsius to Fahrenheit</button>
-    <button id="fahToC">Fahrenheit to Celsius</button>
+    <button id="add" class="btn btn-primary">Add</button>
+    <button id="sub" class="btn btn-primary">Subtract</button>
+    <button id="mult" class="btn btn-primary">Multiply</button>
+    <button id="div" class="btn btn-primary">Divide</button>
+    <button id="mod" class="btn btn-primary">Modulo</button>
+    <button id="sqrt" class="btn btn-primary">Square Root</button>
+    <button id="areaOfC" class="btn btn-primary">Area of Circle</button>
+    <button id="celToF" class="btn btn-primary">Celsius to Fahrenheit</button>
+    <button id="fahToC" class="btn btn-primary">Fahrenheit to Celsius</button>
     <br>
     <div class="row">
     <div id="userInput" class="col-sm">
         <h3>Addition</h3>
-        <p><input type="text" id="number1" placeholder="1st number"/></p> +
-        <p><input type="text" id="number2" placeholder="2nd number"/></p> 
-        <button id="userAdd">Add</button>  
+        <p><input type="text" id="number1" class="form-control" placeholder="1st number"/></p> +
+        <p><input type="text" id="number2" class="form-control" placeholder="2nd number"/></p> 
+        <button id="userAdd" class="btn btn-primary">Add</button>  
         <p id="ans">The answer goes here</p>    
     </div>
 
     <div id="userInput" class="col-sm">
     <h3>Division</h3>
-        <p><input type="text" id="div1" placeholder="1st number"/></p> /
-        <p><input type="text" id="div2" placeholder="2nd number"/></p> 
-        <button id="userDiv">Calculate</button>
+        <p><input type="text" id="div1" class="form-control" placeholder="1st number"/></p> /
+        <p><input type="text" id="div2" class="form-control" placeholder="2nd number"/></p> 
+        <button id="userDiv" class="btn btn-primary">Calculate</button>
         <p id="ansDiv">The answer goes here</p>            
     </div>
 
     <div id="userInput" class="col-sm">
     <h3>Multiplication</h3>
-        <p><input type="text" id="mult1" placeholder="1st number"/></p> *
-        <p><input type="text" id="mult2" placeholder="2nd number"/></p> 
-        <button id="userMult">Calculate</button>
+        <p><input type="text" id="mult1" class="form-control" placeholder="1st number"/></p> *
+        <p><input type="text" id="mult2" class="form-control" placeholder="2nd number"/></p> 
+        <button id="userMult" class="btn btn-primary">Calculate</button>
         <p id="ansMult">The answer goes here</p>            
     </div>
 
     <div id="userInput" class="col-sm">
     <h3>Area of Circle</h3>
-        <p>3.141592 * <input type="text" id="cir1" placeholder="radius"/>&sup2</p>
-        <button id="userCir">Calculate</button>
+        <p>3.141592 * <input type="text" class="form-control" id="cir1" placeholder="radius"/>&sup2</p>
+        <button id="userCir" class="btn btn-primary">Calculate</button>
         <p id="ansCir">The answer goes here</p>            
     </div>
     <div id="userInput" class="col-sm">
         <h3>Square Root</h3>
-        <p><input type="text" id="numSqrt" placeholder="Enter a number"/></p>
-        <button id="Sqrt">Calculate</button>
+        <p><input type="text" id="numSqrt" class="form-control" placeholder="Enter a number"/></p>
+        <button id="Sqrt" class="btn btn-primary">Calculate</button>
         <p id="ansSqrt">The answer goes here</p>            
     </div>
 
     <div id="userInput" class="col-sm">
         <h3>Solution for Fahrenheit</h3>
-        <p>(<input type="text" id="numFah" placeholder="celsius"/> * 1.8) + 32</p>
-        <button id="fahrenheit">Calculate</button>
+        <p>(<input type="text" id="numFah" class="form-control" placeholder="celsius"/> * 1.8) + 32</p>
+        <button id="fahrenheit" class="btn btn-primary">Calculate</button>
         <p id="ansFah">The answer goes here</p>            
     </div>
 
     <div id="userInput" class="col-sm">
         <h3>Solution for Celsius</h3>
-        <p>(<input type="text" id="numCel" placeholder="fahrenheit"/> - 32) + 1.8</p>
-        <button id="celsius">Calculate</button>
+        <p>(<input type="text" id="numCel" class="form-control" placeholder="fahrenheit"/> - 32) + 1.8</p>
+        <button id="celsius" class="btn btn-primary">Calculate</button>
         <p id="ansCel">The answer goes here</p>            
     </div>
+    <div id="userInput" class="col-sm">
+        <h3>Modulo</h3>
+        <p><input type="text" id="numMod1" class="form-control" placeholder="Enter Value"/></p>
+        <p><input type="text" id="numMod2" class="form-control" placeholder="Enter Value"/></p>        
+        <button id="modulo" class="btn btn-primary">Calculate</button>
+        <p id="ansMod">The answer goes here</p>            
+    </div>
+    <div id="userInput" class="col-sm">
+        <h3>Exponent</h3>
+        <p><input type="text" id="numEx1" class="form-control" placeholder="Enter the value"/></p>
+        <p>To the power of<input type="text" id="numEx2" class="form-control" placeholder="Enter the value"/></p>        
+        <button id="exponent" class="btn btn-primary">Calculate</button>
+    <p id="ansEx">The answer goes here</p>            
+</div>
+
     </div>
 </div>
 </body>

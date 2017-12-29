@@ -39,8 +39,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
     let mult2 = document.getElementById('mult2')
     let numSqrt = document.getElementById('numSqrt')
     let ansSqrt = document.getElementById('ansSqrt')
+    let numMod1 = document.getElementById('numMod1')
+    let numMod2 = document.getElementById('numMod2')
+    let ansMod = document.getElementById('ansMod')
+    let numEx1 = document.getElementById('numEx1')
+    let numEx2 = document.getElementById('numEx2')
+    let ansEx = document.getElementById('ansEx')
     
-    add.addEventListener('click', (e)=>{
+    add.addEventListener('click', ()=>{
         
         fetch('/add')
         .then((response)=>{
@@ -55,7 +61,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         
     })
     
-    sub.addEventListener('click', (e)=>{
+    sub.addEventListener('click', ()=>{
         fetch('/subtract')
         .then((response)=>{
             return response.json()
@@ -69,7 +75,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         
     })
     
-    mult.addEventListener('click', (e)=>{
+    mult.addEventListener('click', ()=>{
         fetch('/multiply')
         .then((response)=>{
             return response.json()
@@ -83,7 +89,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         
     })
     
-    div.addEventListener('click', (e)=>{
+    div.addEventListener('click', ()=>{
         fetch('/divide')
         .then((response)=>{
             return response.json()
@@ -96,7 +102,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
         
     })   
-    mod.addEventListener('click', (e)=>{
+    mod.addEventListener('click', ()=>{
         fetch('/modulo')
         .then((response)=>{
             return response.json()
@@ -109,7 +115,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
         
     })
-    sqrt.addEventListener('click', (e)=>{
+    sqrt.addEventListener('click', ()=>{
         fetch('/square')
         .then((response)=>{
             return response.json()
@@ -121,7 +127,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
         
     })
-    areaOfC.addEventListener('click', (e)=>{
+    areaOfC.addEventListener('click', ()=>{
         fetch('/areaOfC')
         .then((response)=>{
             return response.json()
@@ -133,7 +139,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
         
     })
-    celToF.addEventListener('click', (e)=>{
+    celToF.addEventListener('click', ()=>{
         fetch('/celToF')
         .then((response)=>{
             return response.json()
@@ -146,7 +152,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
         
     })
-    fahToC.addEventListener('click', (e)=>{
+    fahToC.addEventListener('click', ()=>{
         fetch('/fahToC')
         .then((response)=>{
             return response.json()
@@ -159,26 +165,32 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
         
     })
-    userAdd.addEventListener('click', (e)=>{       
+    userAdd.addEventListener('click', ()=>{       
         ans.innerText = Number(number1.value) + Number(number2.value);                
     })
-    userCir.addEventListener('click', (e)=>{
+    userCir.addEventListener('click', ()=>{
         ansCir.innerText = 3.141592 * Math.pow(cir1.value,2)
     })
-    Sqrt.addEventListener('click', (e)=>{
+    Sqrt.addEventListener('click', ()=>{
         ansSqrt.innerText = Math.sqrt(numSqrt.value)
     })
-    userDiv.addEventListener('click', (e)=>{
+    userDiv.addEventListener('click', ()=>{
         ansDiv.innerText = div1.value / div2.value
     })
-    userMult.addEventListener('click', (e)=>{
+    userMult.addEventListener('click', ()=>{
         ansMult.innerText = mult1.value * mult2.value
     })
-    fahrenheit.addEventListener('click', (e)=>{
+    fahrenheit.addEventListener('click', ()=>{
         ansFah.innerText = numFah.value * 1.8 + 32 + 'degrees'
     })
-    celsius.addEventListener('click', (e)=>{
+    celsius.addEventListener('click', ()=>{
         ansCel.innerText = numCel.value - 32 * 1.8 + ' Celsius'
+    })
+    modulo.addEventListener('click',()=>{
+        ansMod.innerText = numMod1.value % numMod2.value
+    })
+    exponent.addEventListener('click',()=>{
+        ansEx.innerText = Math.pow(numEx1.value,numEx2.value)
     })
 })
 
